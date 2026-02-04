@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   i18n: {
     locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'fr', language: 'fr-FR' }
+      { code: 'en', language: 'en-US', file: 'en-Us.json' },
+      { code: 'fr', language: 'fr-FR', file: 'fr-FR.json' }
     ],
     defaultLocale: 'en',
   },
