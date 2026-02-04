@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ $t('map-title') }}</h1>
-    <p>{{ $t('map-description') }}</p>
+    <h1>{{ $t('titre') }}</h1>
+    <p>{{ $t('description-de-la-carte') }}</p>
     <p>{{ markers }}</p>
     <!-- <l-map style="height: 500px; width: 100%;" :zoom="13" :center="[47.413220, -1.219482]">
       <l-tile-layer
