@@ -27,6 +27,14 @@ export default defineNuxtConfig({
    */
     storesDirs: []
   },
+  vuetify: {
+    moduleOptions: {
+      /* module specific options */
+    },
+    vuetifyOptions: {
+      /* vuetify options */
+    }
+  },
 
   modules: [
     '@nuxt/a11y',
@@ -39,6 +47,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/leaflet',
     '@nuxtjs/i18n',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    'vuetify-nuxt-module'
   ]
 })
