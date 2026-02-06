@@ -1,4 +1,8 @@
 {
   "titre": "заголовок",
-  "description-de-la-carte": "описание карты"
+  "description-de-la-carte": "описание карты",
+  "heroes-information": "Информация о героях",
+  "level": "Уровень",
+  "attack": "Атака",
+  "defense": "Оборона"
 }

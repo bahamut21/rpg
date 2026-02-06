@@ -6,11 +6,11 @@ const { data: markers } = await useFetch('/api/markers', {
 </script>
 
 <template lang="html">
-  <div>
-    <h1>{{ $t('titre') }}</h1>
-    <p>{{ $t('description-de-la-carte') }}</p>
-    <p>{{ markers }}</p>
-    <lazy-leaf-card :markers="markers"/>
-  </div>
+  <v-card>
+    <v-card-title>{{ $t('titre') }}</v-card-title>
+    <v-card-subtitle>{{ $t('description-de-la-carte') }}</v-card-subtitle>
+    <lazy-leaf-card v-model:markers="markers"/>
+    <markers-infos :markers="markers" />
+  </v-card>
 </template>
 

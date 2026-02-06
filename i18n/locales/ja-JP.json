@@ -1,4 +1,8 @@
 {
   "titre": "タイトル",
-  "description-de-la-carte": "カードの説明"
+  "description-de-la-carte": "カードの説明",
+  "heroes-information": "ヒーロー情報",
+  "level": "レベル",
+  "attack": "攻撃",
+  "defense": "防衛"
 }

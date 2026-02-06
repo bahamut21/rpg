@@ -1,4 +1,8 @@
 {
   "titre": "title",
-  "description-de-la-carte": "card description"
+  "description-de-la-carte": "card description",
+  "heroes-information": "Heroes Information",
+  "level": "Level",
+  "attack": "Attack",
+  "defense": "Defense"
 }

@@ -6,6 +6,19 @@ const markers = defineModel('markers', { type: Array as PropType<Marker[]>, requ
 const onMapReady = (map: L.Map) => {
   console.log(map)
 }
+const moveToNewPoint = (e: L.DragEndEvent, marker: Marker) => {
+  if (!markers.value) return;
+  if (e.distance > marker.ability.move * 1) {
+    alert('You cannot move that far!');
+    markers.value = [...markers.value]; // Trigger reactivity to reset marker position
+    return;
+  }
+  const newLatLng = e.target.getLatLng();
+  marker.latLng = { lat: newLatLng.lat, lng: newLatLng.lng };
+  markers.value[markers.value.findIndex(m => m.id === marker.id)] = marker;
+  markers.value = [...markers.value]; // Trigger reactivity
+}
+
 </script>
 
 <template lang="html">
@@ -20,17 +33,11 @@ const onMapReady = (map: L.Map) => {
       :key="marker.id"
       :lat-lng="[marker.latLng.lat, marker.latLng.lng]"
       draggable
-      >
+      @dragend="(e: L.DragEndEvent) => moveToNewPoint(e, marker)"
+    >
       <LIcon :icon-url="marker.icon" :icon-size="[32, 32]" :icon-anchor="[16, 32]" />
       <LTooltip>
-        <h3>{{ marker.name }}</h3>
-        <p>Level: {{ marker.ability.level }}</p>
-        <p>Attack: {{ marker.ability.attack }}</p>
-        <p>Defense: {{ marker.ability.defense }}</p>
-        <p>Magic: {{ marker.ability.magic }}</p>
-        <p>Magic Defense: {{ marker.ability.magicDefense }}</p>
-        <p>Speed: {{ marker.ability.speed }}</p>
-        <p>Luck: {{ marker.ability.luck }}</p>
+        <markers-infos :markers="[marker]" />
       </LTooltip>
       <LPopup>
         <h3>{{ marker.name }}</h3>

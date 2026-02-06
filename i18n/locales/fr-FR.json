@@ -1,4 +1,12 @@
 {
   "description-de-la-carte": "description de la carte",
-  "titre": "titre"
+  "titre": "titre",
+  "level": "Level",
+  "attack": "Attack",
+  "defense": "Defense",
+  "magic": "Magic",
+  "magic-defense": "Magic Defense",
+  "speed": "Speed",
+  "luck": "Luck",
+  "heroes-information": "Heroes Information"
 }

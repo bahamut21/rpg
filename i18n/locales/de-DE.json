@@ -1,4 +1,8 @@
 {
   "titre": "Titel",
-  "description-de-la-carte": "Kartenbeschreibung"
+  "description-de-la-carte": "Kartenbeschreibung",
+  "heroes-information": "Informationen zu Helden",
+  "level": "Ebene",
+  "attack": "Angriff",
+  "defense": "Verteidigung"
 }

@@ -1,4 +1,8 @@
 {
   "titre": "标题",
-  "description-de-la-carte": "卡牌说明"
+  "description-de-la-carte": "卡牌说明",
+  "heroes-information": "英雄资讯",
+  "level": "等级",
+  "attack": "攻击",
+  "defense": "防御"
 }
