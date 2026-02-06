@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Marker } from '~~/server/api/markers';
 
+const { sendMessageAlert } = useNotify();
+
 const map = ref(null)
 const markers = defineModel('markers', { type: Array as PropType<Marker[]>, required: true })
 const onMapReady = (map: L.Map) => {
@@ -9,7 +11,7 @@ const onMapReady = (map: L.Map) => {
 const moveToNewPoint = (e: L.DragEndEvent, marker: Marker) => {
   if (!markers.value) return;
   if (e.distance > marker.ability.move * 1) {
-    alert('You cannot move that far!');
+    sendMessageAlert('You cannot move that far!');
     markers.value = [...markers.value]; // Trigger reactivity to reset marker position
     return;
   }
